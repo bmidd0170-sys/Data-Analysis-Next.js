@@ -1,0 +1,82 @@
+# Test Files Summary
+
+## Quick Reference
+
+You have **2 ready-to-use test files** in `my-app/public/`:
+
+### 📊 sample_employees.csv
+10 employee records with data quality issues:
+- **Download from:** `my-app/public/sample_employees.csv`
+- **Issues:** Missing Age/Email, Age outlier (150), Status inconsistency
+- **Expected Score:** ~78/100
+- **Use for:** Testing CSV parsing, missing value detection, outlier detection
+
+### 📦 sample_products.json
+10 product records with data quality issues:
+- **Download from:** `my-app/public/sample_products.json`
+- **Issues:** Null stock_quantity, rating=999, empty supplier, null reviews
+- **Expected Score:** ~72/100
+- **Use for:** Testing JSON parsing, null handling, invalid ranges
+
+---
+
+## How to Get Started
+
+### Step 1: Start the Server
+```bash
+cd my-app
+npm run dev
+```
+
+### Step 2: Access Application
+Open: `http://localhost:3000`
+
+### Step 3: Upload a Test File
+- **Option A:** Navigate to `my-app/public/` and download either file
+- **Option B:** Copy content from the files directly
+- **Option C:** Files already exist in the `public/` folder for direct access
+
+### Step 4: Test Upload
+1. Click "Choose File" or drag-drop the file
+2. Wait for analysis (2-5 seconds)
+3. Review results page
+
+---
+
+## What to Expect
+
+| Metric | CSV File | JSON File |
+|--------|----------|-----------|
+| Overall Score | ~78 | ~72 |
+| Completeness | ~95% | ~97% |
+| Issues Found | 3-4 | 4-5 |
+| Processing Time | <2s | <2s |
+
+---
+
+## Files Included
+
+Located in `my-app/public/`:
+```
+sample_employees.csv      (Employee data - 10 rows)
+sample_products.json      (Product data - 10 items)
+TEST_FILES_README.md      (Detailed test file guide)
+```
+
+Located in `my-app/`:
+```
+TESTING_GUIDE.md          (Complete testing instructions)
+```
+
+---
+
+## Ready to Test? 🚀
+
+1. Run: `npm run dev`
+2. Open: `http://localhost:3000`
+3. Upload: `sample_employees.csv` or `sample_products.json`
+4. Review: Data quality analysis results
+
+For detailed information, see:
+- `TEST_FILES_README.md` - Comprehensive test file documentation
+- `TESTING_GUIDE.md` - Step-by-step testing instructions

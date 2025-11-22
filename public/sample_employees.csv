@@ -1,0 +1,11 @@
+ID,Name,Email,Age,City,Department,Salary,Hire_Date,Performance_Score,Status
+1,John Doe,john.doe@company.com,32,New York,Engineering,85000,1/15/2020,4.5,Active
+2,Jane Smith,jane.smith@company.com,28,Los Angeles,Marketing,65000,3/22/2021,4.2,Active
+3,Bob Johnson,bob.johnson@company.com,,Chicago,Sales,72000,6/10/2019,3.8,Active
+4,Alice Williams,,45,Houston,Engineering,95000,11/5/2018,4.8,Active
+5,Charlie Brown,charlie.b@company.com,38,Phoenix,HR,58000,7/18/2020,3.5,Active
+6,Diana Prince,diana.prince@company.com,29,Philadelphia,Engineering,88000,2/14/2021,4.6,Active
+7,Ethan Hunt,ethan.hunt@company.com,150,San Antonio,Sales,71000,9/30/2019,3.9,Inactive
+8,Fiona Green,fiona.green@company.com,34,San Diego,Marketing,68000,5/11/2020,4.1,Active
+9,George Harris,george.harris@company.com,,Dallas,Engineering,92000,8/22/2018,4.7,Active
+10,Hannah Lee,hannah.lee@company.com,26,San Jose,HR,55000,1/3/2022,3.2,Active

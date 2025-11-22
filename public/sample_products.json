@@ -1,0 +1,122 @@
+[
+  {
+    "product_id": "PROD001",
+    "product_name": "Laptop Pro 15",
+    "category": "Electronics",
+    "price": 1299.99,
+    "stock_quantity": 45,
+    "supplier": "TechCorp Industries",
+    "rating": 4.8,
+    "reviews_count": 234,
+    "last_restocked": "2024-11-15",
+    "status": "In Stock"
+  },
+  {
+    "product_id": "PROD002",
+    "product_name": "Wireless Mouse",
+    "category": "Accessories",
+    "price": 29.99,
+    "stock_quantity": 156,
+    "supplier": "PeripheralMaker",
+    "rating": 4.2,
+    "reviews_count": 89,
+    "last_restocked": "2024-11-18",
+    "status": "In Stock"
+  },
+  {
+    "product_id": "PROD003",
+    "product_name": "USB-C Cable",
+    "category": "Accessories",
+    "price": 15.99,
+    "stock_quantity": 0,
+    "supplier": "CableSolutions",
+    "rating": 4.5,
+    "reviews_count": 156,
+    "last_restocked": "2024-10-22",
+    "status": "Out of Stock"
+  },
+  {
+    "product_id": "PROD004",
+    "product_name": "Monitor 4K 32inch",
+    "category": "Electronics",
+    "price": 599.99,
+    "stock_quantity": 12,
+    "supplier": "DisplayTech",
+    "rating": 4.7,
+    "reviews_count": 198,
+    "last_restocked": "2024-11-10",
+    "status": "In Stock"
+  },
+  {
+    "product_id": "PROD005",
+    "product_name": "Mechanical Keyboard",
+    "category": "Accessories",
+    "price": 149.99,
+    "stock_quantity": null,
+    "supplier": "KeyMaster Electronics",
+    "rating": 4.9,
+    "reviews_count": 312,
+    "last_restocked": "2024-11-12",
+    "status": "In Stock"
+  },
+  {
+    "product_id": "PROD006",
+    "product_name": "Webcam HD",
+    "category": "Accessories",
+    "price": 79.99,
+    "stock_quantity": 34,
+    "supplier": "",
+    "rating": 4.1,
+    "reviews_count": 67,
+    "last_restocked": "2024-11-08",
+    "status": "In Stock"
+  },
+  {
+    "product_id": "PROD007",
+    "product_name": "Desk Lamp LED",
+    "category": "Furniture",
+    "price": 45.99,
+    "stock_quantity": 78,
+    "supplier": "LightWorks Co",
+    "rating": 3.8,
+    "reviews_count": 45,
+    "last_restocked": "2024-11-14",
+    "status": "In Stock"
+  },
+  {
+    "product_id": "PROD008",
+    "product_name": "Notebook Set",
+    "category": "Stationery",
+    "price": 12.99,
+    "stock_quantity": 245,
+    "supplier": "PaperGoods Ltd",
+    "rating": 4.3,
+    "reviews_count": 123,
+    "last_restocked": "2024-11-16",
+    "status": "In Stock"
+  },
+  {
+    "product_id": "PROD009",
+    "product_name": "Portable Charger",
+    "category": "Electronics",
+    "price": 49.99,
+    "stock_quantity": 89,
+    "supplier": "PowerCell Corp",
+    "rating": 999,
+    "reviews_count": 298,
+    "last_restocked": "2024-11-13",
+    "status": "In Stock"
+  },
+  {
+    "product_id": "PROD010",
+    "product_name": "Screen Protector",
+    "category": "Accessories",
+    "price": 9.99,
+    "stock_quantity": 567,
+    "supplier": "ProtectGlass Inc",
+    "rating": 4.0,
+    "reviews_count": null,
+    "last_restocked": "2024-11-17",
+    "status": "In Stock"
+  }
+]
