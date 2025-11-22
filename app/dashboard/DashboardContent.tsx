@@ -1,24 +1,28 @@
-import { Suspense } from "react";
-import DashboardContent from "./DashboardContent";
+"use client";
 
-function DashboardLoading() {
-  return (
-    <div className="page-container">
-      <div style={{ textAlign: "center", padding: "60px 0" }}>
-        <h2 style={{ marginBottom: "20px" }}>Loading Dashboard...</h2>
-        <p style={{ color: "#6b7280" }}>Preparing your analysis dashboard...</p>
-      </div>
-    </div>
-  );
-}
+import { useSearchParams, useRouter } from "next/navigation";
+import { useEffect, useState, useRef } from "react";
+import { DataAnalysisResult } from "@/lib/dataAnalyzer";
+import { AIInsight } from "@/lib/aiAnalyzer";
+import Chart from "chart.js/auto";
 
-export default function DashboardPage() {
-  return (
-    <Suspense fallback={<DashboardLoading />}>
-      <DashboardContent />
-    </Suspense>
-  );
-}
+export default function DashboardContent() {
+  const searchParams = useSearchParams();
+  const router = useRouter();
+  const [analysis, setAnalysis] = useState<DataAnalysisResult | null>(null);
+  const [insights, setInsights] = useState<AIInsight[]>([]);
+  const [selectedColumn, setSelectedColumn] = useState<string | null>(null);
+  const [downloading, setDownloading] = useState(false);
+  
+  const qualityChartRef = useRef<HTMLCanvasElement>(null);
+  const dataTypesChartRef = useRef<HTMLCanvasElement>(null);
+  const nullValuesChartRef = useRef<HTMLCanvasElement>(null);
+
+  const qualityChartInstance = useRef<Chart | null>(null);
+  const dataTypesChartInstance = useRef<Chart | null>(null);
+  const nullValuesChartInstance = useRef<Chart | null>(null);
+
+  const downloadReport = async (format: "csv" | "json") => {
     if (!analysis) return;
     setDownloading(true);
     try {
