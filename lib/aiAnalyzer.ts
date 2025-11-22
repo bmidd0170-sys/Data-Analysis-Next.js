@@ -30,18 +30,21 @@ export interface AIInsight {
 }
 
 /**
- * OpenAI client configuration
- * Uses server-side API key for secure communication
- */
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
-
-/**
  * AIAnalyzer class provides static methods for generating AI-powered insights
  * @class AIAnalyzer
  */
 export class AIAnalyzer {
+  /**
+   * Lazily initialize OpenAI client only when needed
+   * @private
+   * @static
+   * @returns {OpenAI} OpenAI client instance
+   */
+  private static getOpenAIClient(): OpenAI {
+    return new OpenAI({
+      apiKey: process.env.OPENAI_API_KEY,
+    });
+  }
   /**
    * Generates AI-powered insights for data quality improvement
    * 
@@ -96,6 +99,7 @@ Please provide recommendations in JSON format as an array of objects with: prior
 Return ONLY valid JSON array, no other text.`;
 
     try {
+      const openai = this.getOpenAIClient();
       const response = await openai.chat.completions.create({
         model: "gpt-4o-mini",
         messages: [
