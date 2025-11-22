@@ -19,44 +19,7 @@ export default function DashboardPage() {
     </Suspense>
   );
 }
-    if (!analysis) return;
-    setDownloading(true);
-    try {
-      const response = await fetch("/api/report", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ analysis, insights, format }),
-      });
 
-      if (!response.ok) throw new Error("Failed to generate report");
-
-      const blob = await response.blob();
-      const url = window.URL.createObjectURL(blob);
-      const a = document.createElement("a");
-      a.href = url;
-      a.download = `report-${Date.now()}.${format}`;
-      document.body.appendChild(a);
-      a.click();
-      window.URL.revokeObjectURL(url);
-      document.body.removeChild(a);
-    } catch (err) {
-      console.error("Download failed:", err);
-      alert("Failed to download report");
-    } finally {
-      setDownloading(false);
-    }
-  };
-
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-
-    // Try to get data from sessionStorage first
-    const sessionAnalysis = sessionStorage.getItem("analysisData");
-    const sessionInsights = sessionStorage.getItem("insightsData");
-
-    if (sessionAnalysis) {
-      try {
-        const parsed = JSON.parse(sessionAnalysis);
         setAnalysis(parsed);
         if (parsed.columns && parsed.columns.length > 0) {
           setSelectedColumn(parsed.columns[0].name);
